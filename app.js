@@ -2,7 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const {init, Post} = require("./db");
 
+console.log("starting server");
+
 const app = express();
+
+process.on('SIGINT', () => process.exit(0));
 
 
 app.use(express.json());

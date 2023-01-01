@@ -3,8 +3,8 @@ require('mongoose-type-email');
 
 const postsSchema = new mongoose.Schema({
     title: String,
-    author: mongoose.SchemaTypes.Email,
-    //author: String,
+    //author: mongoose.SchemaTypes.Email,
+    author: String,
     creationDate: { type: Date, default: Date.now },
     content: String
 });
